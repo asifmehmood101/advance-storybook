@@ -16,12 +16,14 @@ export default {
   args: {
     primary: false,
   },
+
+  // component level parameters
   parameters: {
-    background: {
-      value: [
+    backgrounds: {
+      values: [
         { name: 'red', value: '#f00' },
-        { name: 'green', value: '#0f0' },
-        { name: 'blue', value: '#00f' },
+        { name: 'parrot-green', value: '#0f0' },
+        { name: 'whatever', value: '#0fff' },
       ],
     },
   },
@@ -37,16 +39,16 @@ Primary.args = {
   label: 'Button',
 };
 
-// story parameters
-// Primary.parameters = {
-//   background: {
-//     value: [
-//       { name: 'red', value: '#f00' },
-//       { name: 'green', value: '#0f0' },
-//       { name: 'blue', value: '#00f' },
-//     ],
-//   },
-// };
+// story level parameters
+Primary.parameters = {
+  backgrounds: {
+    values: [
+      { name: 'brown', value: '#f001' },
+      { name: 'green', value: '#0f0a' },
+      { name: 'blue', value: '#12a' },
+    ],
+  },
+};
 
 console.log('hello', Primary.parameters);
 
